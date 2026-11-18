@@ -1,0 +1,26 @@
+# ==============================================================================
+# Docker Compose Configuration: CloudPulse Application Stack
+# Training: Docker [Part 2] - Multi-Container & Service Orchestration
+# ==============================================================================
+
+services:
+  web:
+    # Image and Build Configuration
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-web-app:v2.0
+    container_name: cloudpulse-web-service
+
+    # Port Mapping: Publish container port 80 to host port 8080
+    ports:
+      - "8080:80"
+
+    # Environment Variables
+    environment:
+      APP_NAME: "CloudPulse Web Portal"
+      APP_ENV: "production"
+      APP_VERSION: "2.0.0"
+
+    # Container Restart Policy
+    restart: unless-stopped

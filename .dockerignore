@@ -1,0 +1,31 @@
+# Git metadata
+.git
+.gitignore
+
+# Project documentation & reference assets
+docs/
+*.md
+screenshots/
+
+# Operating System metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker Compose configuration files
+docker-compose*.yml
+
+# Logs and temporary files
+logs/
+*.log
+*.tmp
