@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudPulse Web Portal - v1.0.0</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div>
+          <h1>CloudPulse Web Portal</h1>
+          <p class="subtitle">Custom Docker Image &amp; Orchestration Training</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <span class="badge" id="versionBadge">v1.0.0</span>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="card hero-card">
+        <div class="card-header">
+          <h2>Application Overview</h2>
+          <span class="status-indicator online"><span class="dot"></span> Online</span>
+        </div>
+        <p>This frontend web application serves as the production target for custom Docker image packaging and Docker Compose multi-container orchestration.</p>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <span class="meta-label">Environment</span>
+            <span class="meta-value" id="envValue">Docker Container (Nginx)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Serving Port</span>
+            <span class="meta-value">80 (Mapped to Host 8080)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Build Type</span>
+            <span class="meta-value">Static Alpine Build</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">System Time</span>
+            <span class="meta-value" id="systemTime">--:--:--</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-grid">
+        <div class="card feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>Custom Image</h3>
+          <p>Packaged using a minimal Alpine Nginx base image with layered caching optimization.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Reproducible Builds</h3>
+          <p>Eliminates environment drift across development, testing, and production workflows.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Compose Managed</h3>
+          <p>Declarative lifecycle configuration via <code>docker-compose.yml</code> for automated deployment.</p>
+        </div>
+      </section>
+
+      <section class="card diagnostics-card">
+        <div class="card-header">
+          <h2>Client Diagnostics</h2>
+          <button class="btn" id="refreshBtn">Refresh Data</button>
+        </div>
+        <div class="diagnostics-content">
+          <div class="diag-row">
+            <strong>Client User-Agent:</strong>
+            <span id="userAgent">Loading...</span>
+          </div>
+          <div class="diag-row">
+            <strong>Session Uptime:</strong>
+            <span id="uptime">0s</span>
+          </div>
+          <div class="diag-row">
+            <strong>Application Status:</strong>
+            <span class="tag-success">Healthy (200 OK)</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 CloudPulse DevOps Stack &bull; Docker Part 2 Training Assignment</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
