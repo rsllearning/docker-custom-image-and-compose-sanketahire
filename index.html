@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CloudPulse Web Portal - v1.0.0</title>
+  <title>CloudPulse Web Portal - v2.0.0</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,14 +23,19 @@
         </div>
       </div>
       <div class="header-right">
-        <span class="badge" id="versionBadge">v1.0.0</span>
+        <span class="badge badge-v2" id="versionBadge">v2.0.0</span>
       </div>
     </header>
+
+    <div class="update-banner">
+      <span class="sparkle">✨</span>
+      <span><strong>Release Update v2.0:</strong> Application re-tagged &amp; updated with multi-version Docker deployment verification!</span>
+    </div>
 
     <main class="main-content">
       <section class="card hero-card">
         <div class="card-header">
-          <h2>Application Overview</h2>
+          <h2>Application Overview (v2.0 Release)</h2>
           <span class="status-indicator online"><span class="dot"></span> Online</span>
         </div>
         <p>This frontend web application serves as the production target for custom Docker image packaging and Docker Compose multi-container orchestration.</p>
@@ -44,8 +49,8 @@
             <span class="meta-value">80 (Mapped to Host 8080)</span>
           </div>
           <div class="meta-item">
-            <span class="meta-label">Build Type</span>
-            <span class="meta-value">Static Alpine Build</span>
+            <span class="meta-label">Image Tag</span>
+            <span class="meta-value">my-web-app:v2.0</span>
           </div>
           <div class="meta-item">
             <span class="meta-label">System Time</span>
@@ -56,9 +61,9 @@
 
       <section class="features-grid">
         <div class="card feature-card">
-          <div class="feature-icon">📦</div>
-          <h3>Custom Image</h3>
-          <p>Packaged using a minimal Alpine Nginx base image with layered caching optimization.</p>
+          <div class="feature-icon">🏷️</div>
+          <h3>Tag-Based Versioning</h3>
+          <p>Seamlessly tracks releases across <code>v1.0</code> and <code>v2.0</code> tags without redundant storage overhead.</p>
         </div>
         <div class="card feature-card">
           <div class="feature-icon">🚀</div>
@@ -87,8 +92,8 @@
             <span id="uptime">0s</span>
           </div>
           <div class="diag-row">
-            <strong>Application Status:</strong>
-            <span class="tag-success">Healthy (200 OK)</span>
+            <strong>Active Release:</strong>
+            <span class="tag-success">v2.0.0 Production Build</span>
           </div>
         </div>
       </section>
